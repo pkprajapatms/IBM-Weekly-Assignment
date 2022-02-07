@@ -98,7 +98,7 @@ function datetime() {
         10: "Nov",
         11: "Dec",
     };
-    let date = ntd[d.getDay()] + "," + ntm[d.getMonth()] + " " + d.getDate();
+    let date = ntd[d.getDay()] + ", " + ntm[d.getMonth()] + " " + d.getDate();
     document.getElementById("date").innerHTML = date;
     console.log(date);
 };
