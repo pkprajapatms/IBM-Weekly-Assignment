@@ -1,0 +1,45 @@
+<body>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<div id="body">
+  <main>
+    <div class="content">
+      <h1>Learn to code by watching others</h1>
+      <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+  but understanding how developers think is invaluable.</p>
+    </div>
+    <div class="signup">
+      <div class="signup__pricing">
+        <p><strong>Try it free 7 days</strong> then INR 1999/mo. thereafter</p>
+      </div>
+
+      <form action="" id="signup__form" [formGroup]="logIn" (ngSubmit)="Onsubmit()">
+        
+        <input type="text" aria-label="First name" placeholder="First name" formControlName="fname"><br>
+        <small *ngIf="!f.valid && f.touched">Enter valid name (minimum character length -3)</small>
+        <br>
+        
+        <input type="text" aria-label="Last name" placeholder="Last name" formControlName="lname"><br>
+        <br>
+
+        <input type="text" aria-label="Email address" placeholder="Email address" formControlName="email"><br>
+        <small *ngIf="!e.valid && e.touched">Enter valid email address</small>
+        <br>
+
+        <input type="password" formControlName="password" placeholder="password"><br>
+        <small *ngIf="!p.valid && p.touched">Enter valid password (minimum character length -7)</small>
+
+        <br>
+
+        <input type="submit" value="Claim your free trial" aria-label="Submit" [disabled]="!logIn.valid">
+        <span class="terms-notice">By clicking the button, you are agreeing to our <span><a href="" target="#">Terms and Services</a></span></span>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by Ganesh.
+    </p>
+  </footer>
+</div>
+</body>
